@@ -1,0 +1,30 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "cn-qqliu-tk8",
+    "main": "worker/index.ts",
+    "compatibility_date": "2025-04-05",
+    "assets": {
+        "not_found_handling": "single-page-application"
+    },
+    "observability": {
+        "enabled": true
+    },
+    // D1数据库绑定
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "navigation-db",
+            "database_id": "2fa8e29a-9267-4370-b105-7d86c2b37633"
+        }
+    ],
+    "vars": {
+        "AUTH_ENABLED": "usj865",
+        "AUTH_USERNAME": "admin",
+        "AUTH_PASSWORD": "Ba@726565366",
+        "AUTH_SECRET": "$2a$12$58LOscUA/VDXMyHlrhmIauspOEhq22XcCiA1RCcqI0VA8rSj4yr3q"
+    }
+}
